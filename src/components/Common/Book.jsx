@@ -1,10 +1,18 @@
-import React from 'react';
+import React from "react";
 
 const Book = ({ book }) => {
   return (
     <div>
-      <h3>{book.title}</h3>
-      <p>Author: {book.author}</p>
+      <table style={{border: '1px solid'}}>
+        <tr>
+          <th style={{border: '1px solid'}}>Tittle</th>
+          <th style={{border: '1px solid'}}>Author</th>
+        </tr>
+        <tr>
+          <td style={{border: '1px solid'}}>{book.title}</td>
+          <td style={{border: '1px solid'}}>{book.author}</td>
+        </tr>
+      </table>
     </div>
   );
 };
