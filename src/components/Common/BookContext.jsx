@@ -2,13 +2,13 @@
 
 import React, { createContext, useState } from 'react';
 
-export const BookContext = createContext();
+export const NewContext = createContext();
 
 const BookContextProvider = ({ children }) => {
   const [books, setBooks] = useState([
-    { id: 1, title: 'Book 1' },
-    { id: 2, title: 'Book 2' },
-    { id: 3, title: 'Book 3' },
+    { id: 1, title: 'Book 1', author: 'a1' },
+    { id: 2, title: 'Book 2', author: 'a2' },
+    { id: 3, title: 'Book 3', author: 'a3' },
   ]);
 
   const [users, setUsers] = useState([
@@ -24,9 +24,9 @@ const BookContextProvider = ({ children }) => {
 
 
   return (
-    <BookContext.Provider value={{ books, setBooks, users, setUsers , addBook }}>
+    <NewContext.Provider value={{ books, setBooks, users, setUsers , addBook }}>
       {children}
-    </BookContext.Provider>
+    </NewContext.Provider>
   );
 };
 
